@@ -1,0 +1,137 @@
+.classicCasePages-list {
+  padding: 0 .35rem;
+  overflow: hidden;
+  text-align: center;
+  margin-top: .5rem;
+}
+
+.classicCasePages-list .list{
+  display: none;
+}
+
+.classicCasePages-list .active{
+  display: block
+}
+
+.classicCasePages-item {
+  float: left;
+  color: #fff;
+  width: 3.18rem;
+  height: 3.99rem;
+  background-color: #fff;
+  border: 1px solid #E4E4E4;
+  text-align: center;
+  margin-bottom: .4rem;
+}
+
+.classicCasePages-list .classicCasePages-item:nth-child(2n) {
+  margin-left: .42rem;
+}
+
+.classicCasePages-item img {
+  width: 3rem;
+  height: 3.3rem;
+  margin-top: .08rem;
+}
+
+.classicCasePages-item div {
+  width: 3rem;
+  height: .52rem;
+  line-height: .52rem;
+  background-color: #373133;
+  font-size: .28rem;
+  text-align: center;
+  margin-left: .06rem;
+}
+
+.cassicCase-pages {
+  text-align: center;
+}
+
+.section-top {
+  text-align: center
+}
+
+.more {
+  color: #9d9d9d;
+  font-size: .24rem;
+  margin-bottom: .4rem;
+}
+
+.wrapper section .classicCase {
+  margin-top: .7rem;
+}
+
+/* 遮罩轮播 */
+.mask-swiper {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.mask-content {
+  position: relative;
+  top: 35%;
+  padding: 0 .8rem 0 .8rem;
+}
+
+ .mask-content .swiper-container {
+  text-align: center;
+}
+
+ .mask-content .swiper-slide {
+  left: 22%;
+}
+
+.mask-content .swiper-bg {
+  width: 3.3rem;
+  height: 4.11rem;
+  background-color: #fff;
+}
+
+.mask-content .swiper-button-next {
+  transform: rotate(180deg);
+}
+
+ .mask-content .swiper-button-prev,
+ .mask-content .swiper-button-next {
+  width: .61rem;
+  height: .61rem;
+  background-image: url(../images/icon/toLeft.png);
+  background-size: .61rem .61rem;
+}
+
+ .mask-content .swiper-container img {
+  width: 3.17rem;
+  height: 3.97rem;
+  margin-top: .07rem;
+}
+
+ .mask-content .swiper-container span {
+  display: inline-block;
+  color: #fff;
+  width: 3.17rem;
+  height: .53rem;
+  line-height: .52rem;
+  background-color: #373133;
+  font-size: .28rem;
+  text-align: center;
+}
+
+
+ .mask-content .closeBtn {
+  width: .41rem;
+  height: .41rem;
+  position: absolute;
+  right: 1.07rem;
+  top: -.68rem;
+}
+
+.noScroll {
+  overflow: hidden;
+}

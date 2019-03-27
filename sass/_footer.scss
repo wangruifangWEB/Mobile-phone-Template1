@@ -1,0 +1,59 @@
+footer {
+  color: #fff;
+  width: 7.5rem;
+  height: 8.76rem;
+  background-color: #373737;
+  text-align: center;
+  line-height: .4rem;
+
+  .footer-content {
+    width: 5.6rem;
+    margin: 0 0 .4rem .92rem;
+    padding-top: .7rem;
+
+    .footer-one {
+      p {
+        font-size: .32rem;
+      }
+
+      span {
+        font-size: .18rem;
+      }
+    }
+
+    .footer-two {
+      font-size: .24rem;
+      margin: .2rem 0 .4rem 0;
+    }
+
+    .footer-three {
+      color: #9d9d9d;
+      font-size: .24rem;
+    }
+
+    form {
+      display: inline-block;
+
+      input {
+        width: 3.6rem;
+        height: .5rem;
+        line-height: .5rem;
+        display: block;
+        border: 1px solid #fff;
+        padding-left: .1rem;
+        background: none;
+        margin-bottom: .2rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    .footer-tel {
+      font-size: .32rem;
+      margin: .25rem 0;
+    }
+  }
+}

@@ -1,0 +1,843 @@
+@charset "UTF-8";
+/*  
+  Document   : CSS样式初始化  
+  Created on : 2016. 8. 7,09:41:00  
+  Author :  
+  Description:  
+  CSS样式表的初始化，全局样式设置。部分样式属性请根据具体页面重置其属性  
+      导入方式：<link href="css/common.css" rel="stylesheet" type="text/css" /> */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset,
+img {
+  border: 0 none;
+}
+
+/* 重置fieldset（表单分组）、图片的边框为0*/
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+/* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置嵌套引用的引号类型 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* 重置嵌套引用*/
+input,
+select,
+textarea,
+button {
+  vertical-align: middle;
+}
+
+/* 重置表单控件垂直居中*/
+button {
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 重置body 页面背景为白色 */
+body,
+th,
+td,
+input,
+select,
+textarea,
+button {
+  font-size: 12px;
+  line-height: 1;
+  font-family: "微软雅黑", "黑体", "宋体";
+  color: #666;
+}
+
+/* 重置页面文字属性 */
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+/* 重置链接a标签 */
+a:active,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* 重置链接a标签的鼠标滑动效果 */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* 重置样式标签的样式 */
+caption {
+  display: none;
+}
+
+/* 重置表格标题为隐藏 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+/* 重置table属性 */
+img {
+  vertical-align: middle;
+}
+
+/* 图片在当前行内的垂直位置 */
+/* 页面设置 */
+/* 取消a标签点击后的虚线框 */
+a {
+  outline: none;
+}
+
+a:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 设置页面文字等在拖动鼠标选中情况下的背景色与文字颜色 */
+/*   
+::selection {color: #fff;background-color: #4C6E78;}      
+::-moz-selection {color: #fff;background-color: #4C6E78;}   
+*/
+/*清除浮动*/
+.clear {
+  clear: both;
+}
+
+/*清除浮动--推荐使用*/
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+  font-size: .24rem;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  font-size: .24rem;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  font-size: .24rem;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+  font-size: .24rem;
+}
+
+header {
+  width: 7.5rem;
+  color: #fff;
+  font-size: 0.24rem;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+
+header .header-mask {
+  height: .7rem;
+  line-height: .7rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 .3rem 0 .2rem;
+}
+
+header .header-mask .header-mask-lf {
+  display: inline-block;
+}
+
+header .header-mask .header-mask-lf img {
+  width: .39rem;
+  height: .43rem;
+  margin: 0 .1rem .05rem 0;
+}
+
+header .header-mask .header-mask-lf span {
+  font-size: 0.24rem;
+  line-height: 0.878;
+  text-align: center;
+}
+
+header .header-mask .header-mask-rt {
+  width: .46rem;
+  height: .31rem;
+  float: right;
+  margin-top: .2rem;
+}
+
+header .news-details-header {
+  text-align: center;
+}
+
+header .news-details-header .header-mask-lf {
+  float: left;
+}
+
+header .news-details-header .header-mask-lf img {
+  width: .17rem;
+  height: .31rem;
+}
+
+header .header-mask-list {
+  display: none;
+  width: 3.42rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  right: 0;
+}
+
+header .header-mask-list li {
+  height: .7rem;
+  line-height: .7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header .header-mask-list li a {
+  color: #fff;
+}
+
+footer {
+  color: #fff;
+  width: 7.5rem;
+  height: 8.76rem;
+  background-color: #373737;
+  text-align: center;
+  line-height: .4rem;
+}
+
+footer .footer-content {
+  width: 5.6rem;
+  margin: 0 0 .4rem .92rem;
+  padding-top: .7rem;
+}
+
+footer .footer-content .footer-one p {
+  font-size: .32rem;
+}
+
+footer .footer-content .footer-one span {
+  font-size: .18rem;
+}
+
+footer .footer-content .footer-two {
+  font-size: .24rem;
+  margin: .2rem 0 .4rem 0;
+}
+
+footer .footer-content .footer-three {
+  color: #9d9d9d;
+  font-size: .24rem;
+}
+
+footer .footer-content form {
+  display: inline-block;
+}
+
+footer .footer-content form input {
+  width: 3.6rem;
+  height: .5rem;
+  line-height: .5rem;
+  display: block;
+  border: 1px solid #fff;
+  padding-left: .1rem;
+  background: none;
+  margin-bottom: .2rem;
+}
+
+footer .footer-content form input:last-child {
+  margin-bottom: 0;
+}
+
+footer .footer-content .footer-tel {
+  font-size: .32rem;
+  margin: .25rem 0;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.wrapper section {
+  width: 7.5rem;
+}
+
+.wrapper section .aboutUs-img {
+  height: 4.36rem;
+}
+
+.wrapper section .aboutUs-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper section .addr {
+  padding: 0 .48rem .7rem .48rem;
+}
+
+.wrapper section .addr .addr-msg {
+  line-height: .5rem;
+  margin: .7rem 0 .4rem 0;
+}
+
+.wrapper section .section-top .swiper-container {
+  height: 7.58rem;
+}
+
+.wrapper section .section-top .swiper-container img {
+  width: 100%;
+}
+
+.wrapper section .section-top .furniture-classification {
+  height: 1.63rem;
+  background-color: #F7F7F7;
+  padding-top: .4rem;
+}
+
+.wrapper section .section-top .furniture-classification .furniture-box div {
+  width: 20%;
+  text-align: center;
+  float: left;
+}
+
+.wrapper section .section-top .furniture-classification .furniture-box div span {
+  display: inherit;
+  margin-top: .17rem;
+  font-size: 0.18rem;
+  color: #0b0b0b;
+}
+
+.wrapper section .section-top .furniture-classification .furniture-box div img {
+  width: .56rem;
+  height: .56rem;
+}
+
+.wrapper section .section-top .furniture-classification .furniture-box.furniture-container div.current span {
+  color: #0b0b0b;
+}
+
+.wrapper section .section-top .furniture-classification .furniture-box.furniture-container div span {
+  color: #979797;
+}
+
+.wrapper section .aboutUs .aboutUs-header {
+  margin: .74rem 0 .5rem 0;
+}
+
+.wrapper section .aboutUs .aboutUs-header .title {
+  font-size: 0.37rem;
+  color: #464646;
+  text-transform: uppercase;
+  line-height: 1.142;
+  text-align: center;
+}
+
+.wrapper section .aboutUs .aboutUs-header .aboutUs-bottom {
+  display: -webkit-box;
+  margin-top: .33rem;
+  text-align: center;
+}
+
+.wrapper section .aboutUs .aboutUs-header .aboutUs-bottom img {
+  width: 1.43rem;
+  height: .94rem;
+  margin: 0 .8rem 0 .58rem;
+}
+
+.wrapper section .aboutUs .aboutUs-header .aboutUs-bottom p {
+  font-size: 0.32rem;
+  color: #464646;
+  line-height: 1.072;
+  margin: .06rem 0 .17rem 0;
+}
+
+.wrapper section .aboutUs .aboutUs-header .aboutUs-bottom em {
+  font-size: 0.18rem;
+  font-family: "Microsoft YaHei";
+  color: #9d9d9d;
+  line-height: 1.028;
+  text-align: center;
+}
+
+.wrapper section .aboutUs .aboutUs-content {
+  position: relative;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg {
+  width: 7.27rem;
+  height: 5.35rem;
+  text-align: center;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg div {
+  margin-left: .48rem;
+  letter-spacing: .027rem;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg div p {
+  font-size: 0.24rem;
+  color: #464646;
+  line-height: .45rem;
+  text-align: left;
+  text-indent: .48rem;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg div .second {
+  margin: .6rem 0 .7rem 0;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg .aboutUs-more {
+  width: 3.07rem;
+  height: .48rem;
+  line-height: .48rem;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  font-size: 0.24rem;
+  display: inline-block;
+}
+
+.wrapper section .aboutUs .aboutUs-content .aboutUs-content-bg:before {
+  background: url("../images/aboutCaseBg.jpg") no-repeat center center;
+  background-size: 100%;
+  width: 7.27rem;
+  height: 5.35rem;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0.24rem;
+  z-index: -1;
+  /*-1 可以当背景*/
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  /* 针对 IE8 以及更早的版本 */
+}
+
+.wrapper section .classicCase {
+  margin-top: 1.93rem;
+  position: relative;
+}
+
+.wrapper section .classicCase .classicCase-header {
+  text-align: center;
+}
+
+.wrapper section .classicCase .classicCase-header .title {
+  font-size: 0.37rem;
+  color: #464646;
+  text-transform: uppercase;
+  line-height: 1.142;
+  text-align: center;
+}
+
+.wrapper section .classicCase .classicCase-header .classicCase-bottom {
+  display: -webkit-box;
+  margin-top: .33rem;
+}
+
+.wrapper section .classicCase .classicCase-header .classicCase-bottom div {
+  position: relative;
+  left: 2.8rem;
+}
+
+.wrapper section .classicCase .classicCase-header .classicCase-bottom img {
+  width: 1.5rem;
+  height: 1.54rem;
+  position: absolute;
+  right: .7rem;
+  top: .2rem;
+}
+
+.wrapper section .classicCase .classicCase-header .classicCase-bottom p {
+  font-size: 0.32rem;
+  color: #464646;
+  line-height: 1.072;
+  margin-bottom: 0.18rem;
+}
+
+.wrapper section .classicCase .classicCase-header .classicCase-bottom em {
+  font-size: 0.18rem;
+  font-family: "Microsoft YaHei";
+  color: #9d9d9d;
+  line-height: 1.028;
+  text-align: center;
+}
+
+.wrapper section .classicCase .classicCase-header .text {
+  font-size: .13rem;
+  color: rgba(70, 70, 70, 0.278);
+  line-height: 2.638;
+  text-align: center;
+  margin-top: .4rem;
+  letter-spacing: .135rem;
+}
+
+.wrapper section .classicCase .classicCase-content {
+  margin-top: .8rem;
+  text-align: center;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-bg {
+  width: 6.63rem;
+  height: 4.52rem;
+  background: url("../images/cassicCaseBg.png") no-repeat center center;
+  background-size: 100%;
+  margin-left: .46rem;
+  position: relative;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-bg img {
+  width: 5.16rem;
+  height: 4.01rem;
+  margin-top: .15rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-bg span {
+  color: #fff;
+  font-size: .28rem;
+  position: absolute;
+  z-index: 10;
+  bottom: .6rem;
+  display: inline-table;
+  right: .8rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list {
+  position: relative;
+  height: 10rem;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header {
+  position: absolute;
+  top: 6.52rem;
+  left: .2rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom {
+  display: -webkit-box;
+  margin-top: .33rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom img {
+  width: 1.88rem;
+  height: 1.67rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom div {
+  text-align: center;
+  margin-left: .2rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom div img {
+  width: 1.43rem;
+  height: .84rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom div p {
+  font-size: 0.24rem;
+  color: #464646;
+  line-height: 1.072;
+  margin: .06rem 0 .17rem 0;
+  position: relative;
+  top: -.4rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom div em {
+  font-size: 0.18rem;
+  color: #9d9d9d;
+  line-height: 1.028;
+  text-align: center;
+  position: relative;
+  top: -.4rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .more-anli-header .more-anli-bottom div::before {
+  width: 1.43rem;
+  height: .84rem;
+  background-image: url("../images/loveHome.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg {
+  width: 7.5rem;
+  height: 3.52rem;
+  background-color: #d6dce8;
+  position: absolute;
+  top: 2.3rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item {
+  color: #fff;
+  width: 3.1rem;
+  height: 3.95rem;
+  background-color: #fff;
+  position: absolute;
+  z-index: 100;
+  -webkit-box-shadow: 0px .2rem .2rem #424959;
+          box-shadow: 0px .2rem .2rem #424959;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item img {
+  width: 3rem;
+  height: 3.3rem;
+  margin-top: .08rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item div {
+  width: 3rem;
+  height: .52rem;
+  line-height: .52rem;
+  background-color: #373133;
+  font-size: .28rem;
+  margin-left: .05rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item-one {
+  top: -1.53rem;
+  left: .35rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item-two {
+  top: -1.5rem;
+  right: .39rem;
+}
+
+.wrapper section .classicCase .classicCase-content .classicCase-list .classicCase-list-bg .classicCase-item-three {
+  bottom: -3.5rem;
+  right: .39rem;
+}
+
+.wrapper section .theNews .theNews-header {
+  margin: .7rem 0 .13rem 0;
+}
+
+.wrapper section .theNews .theNews-header .title {
+  font-size: 0.37rem;
+  color: #464646;
+  text-transform: uppercase;
+  line-height: 1.142;
+  text-align: center;
+}
+
+.wrapper section .theNews .theNews-header .theNews-bottom {
+  display: -webkit-box;
+  margin-top: .33rem;
+}
+
+.wrapper section .theNews .theNews-header .theNews-bottom img {
+  width: 1.43rem;
+  height: .94rem;
+  margin: 0 .8rem 0 .58rem;
+}
+
+.wrapper section .theNews .theNews-header .theNews-bottom div {
+  text-align: center;
+}
+
+.wrapper section .theNews .theNews-header .theNews-bottom div p {
+  font-size: 0.32rem;
+  color: #464646;
+  line-height: 1.072;
+  margin: .06rem 0 .17rem 0;
+}
+
+.wrapper section .theNews .theNews-header .theNews-bottom div em {
+  font-size: 0.18rem;
+  color: #9d9d9d;
+  line-height: 1.028;
+  text-align: center;
+}
+
+.wrapper section .theNews .theNews-list li {
+  display: -webkit-box;
+  padding: .42rem 0 .42rem 0;
+  border-bottom: 1px solid #E4E4E4;
+  margin: 0 .3rem;
+}
+
+.wrapper section .theNews .theNews-list li a {
+  display: inherit;
+}
+
+.wrapper section .theNews .theNews-list li img {
+  width: 2.8rem;
+  height: 2rem;
+}
+
+.wrapper section .theNews .theNews-list li div {
+  margin-left: .27rem;
+  line-height: .53rem;
+}
+
+.wrapper section .theNews .theNews-list li div .title {
+  color: #101D30;
+  width: 3.28rem;
+  font-size: .3rem;
+}
+
+.wrapper section .theNews .theNews-list li div .desc {
+  width: 3.6rem;
+  color: #9D9D9D;
+  font-size: 0.24rem;
+}
+
+.wrapper section .theNews .theNews-list li:last-child {
+  border: none;
+  padding-bottom: .7rem;
+}
+
+.wrapper section .details-container {
+  font-size: 0.24rem;
+  padding: 1.13rem .2rem 0 .2rem;
+}
+
+.wrapper section .details-container .title {
+  font-size: .48rem;
+  color: #101d30;
+  line-height: .8rem;
+}
+
+.wrapper section .details-container .author-time {
+  color: #d9d9d9;
+  margin-bottom: .42rem;
+}
+
+.wrapper section .details-container .content {
+  text-align: center;
+  line-height: .42rem;
+  color: #333333;
+}
+
+.wrapper section .details-container .content img {
+  width: 5.42rem;
+  height: 3.64rem;
+}
+
+.wrapper section .details-container .content p {
+  text-align: left;
+}
+
+.wrapper section .details-container .content .second-paragraph {
+  margin: .62rem 0 .7rem 0;
+}
+
+.wrapper section .details-container .content .third-paragraph {
+  margin: .68rem 0 .6rem 0;
+}
+
+.wrapper section .details-container .content .fourth-paragraph {
+  margin-bottom: .42rem;
+}
+
+.wrapper section .details-container .detail-Upper-lower a {
+  display: block;
+  line-height: .4rem;
+  color: #d9d9d9;
+  text-decoration: underline;
+}
+
+.wrapper section .details-container .detail-Upper-lower .next {
+  margin-bottom: .2rem;
+}
+/*# sourceMappingURL=style.min.css.map */

@@ -1,0 +1,525 @@
+.wrapper {
+  overflow: hidden;
+
+  section {
+    width: 7.5rem;
+
+    // 部分重置
+    .aboutUs-img {
+      height: 4.36rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .addr {
+      padding: 0 .48rem .7rem .48rem;
+
+      .addr-msg {
+        line-height: .5rem;
+        margin: .7rem 0 .4rem 0;
+      }
+    }
+
+    .section-top {
+      .swiper-container {
+        height: 7.58rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .furniture-classification {
+        height: 1.63rem;
+        background-color: #F7F7F7;
+        padding-top: .4rem;
+
+        .furniture-box {
+          div {
+            width: 20%;
+            text-align: center;
+            float: left;
+
+            span {
+              display: inherit;
+              margin-top: .17rem;
+              font-size: $fontSize18;
+              color: $color11;
+            }
+
+            img {
+              width: .56rem;
+              height: .56rem;
+            }
+
+          }
+
+          &.furniture-container {
+            div {
+              &.current {
+                span {
+                  color: $color11;
+                }
+              }
+
+              span {
+                color: #979797;
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+
+    .aboutUs {
+      .aboutUs-header {
+        margin: .74rem 0 .5rem 0;
+
+        .title {
+          font-size: $fontSize37;
+          color: $color70;
+          text-transform: uppercase;
+          line-height: 1.142;
+          text-align: center;
+        }
+
+        .aboutUs-bottom {
+          display: -webkit-box;
+          margin-top: .33rem;
+          text-align: center;
+
+          img {
+            width: 1.43rem;
+            height: .94rem;
+            margin: 0 .8rem 0 .58rem;
+          }
+
+          p {
+            font-size: $fontSize32;
+            color: $color70;
+            line-height: 1.072;
+            margin: .06rem 0 .17rem 0;
+          }
+
+          em {
+            font-size: $fontSize18;
+            font-family: "Microsoft YaHei";
+            color: $color157;
+            line-height: 1.028;
+            text-align: center;
+          }
+        }
+      }
+
+      .aboutUs-content {
+        position: relative;
+
+        .aboutUs-content-bg {
+          width: 7.27rem;
+          height: 5.35rem;
+          text-align: center;
+
+          div {
+            margin-left: .48rem;
+            letter-spacing: .027rem;
+
+            p {
+              font-size: $fontSize;
+              color: $color70;
+              line-height: .45rem;
+              text-align: left;
+              text-indent: .48rem;
+            }
+
+            .second {
+              margin: .6rem 0 .7rem 0;
+            }
+          }
+
+          .aboutUs-more {
+            width: 3.07rem;
+            height: .48rem;
+            line-height: .48rem;
+            border: 2px solid $color51;
+            border-radius: 5px;
+            font-size: $fontSize;
+            display: inline-block;
+          }
+
+          &:before {
+            background: url('../images/aboutCaseBg.jpg') no-repeat center center;
+            background-size: 100%;
+            width: 7.27rem;
+            height: 5.35rem;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: $fontSize;
+            z-index: -1;
+            /*-1 可以当背景*/
+            opacity: 0.2;
+            filter: alpha(opacity=20);
+            /* 针对 IE8 以及更早的版本 */
+          }
+        }
+
+      }
+    }
+
+    .classicCase {
+      margin-top: 1.93rem;
+      position: relative;
+
+      .classicCase-header {
+        text-align: center;
+
+        .title {
+          font-size: $fontSize37;
+          color: $color70;
+          text-transform: uppercase;
+          line-height: 1.142;
+          text-align: center;
+        }
+
+        .classicCase-bottom {
+          display: -webkit-box;
+          margin-top: .33rem;
+
+          div {
+            position: relative;
+            left: 2.8rem;
+          }
+
+          img {
+            width: 1.5rem;
+            height: 1.54rem;
+            position: absolute;
+            right: .7rem;
+            top: .2rem;
+          }
+
+          p {
+            font-size: $fontSize32;
+            color: $color70;
+            line-height: 1.072;
+            margin-bottom: $fontSize18;
+          }
+
+          em {
+            font-size: $fontSize18;
+            font-family: "Microsoft YaHei";
+            color: $color157;
+            line-height: 1.028;
+            text-align: center;
+          }
+        }
+
+        .text {
+          font-size: .13rem;
+          color: rgba(70, 70, 70, 0.278);
+          line-height: 2.638;
+          text-align: center;
+          margin-top: .4rem;
+          letter-spacing: .135rem;
+        }
+      }
+
+      .classicCase-content {
+        margin-top: .8rem;
+        text-align: center;
+
+        .classicCase-bg {
+          width: 6.63rem;
+          height: 4.52rem;
+          background: url('../images/cassicCaseBg.png') no-repeat center center;
+          background-size: 100%;
+          margin-left: .46rem;
+          position: relative;
+
+          img {
+            width: 5.16rem;
+            height: 4.01rem;
+            margin-top: .15rem;
+          }
+
+          span {
+            color: $color;
+            font-size: .28rem;
+            position: absolute;
+            z-index: 10;
+            bottom: .6rem;
+            display: inline-table;
+            right: .8rem;
+          }
+        }
+
+        .classicCase-list {
+          position: relative;
+          height: 10rem;
+          border-bottom: 1px solid rgb(228, 228, 228);
+
+          .more-anli-header {
+            position: absolute;
+            top: 6.52rem;
+            left: .2rem;
+
+            .more-anli-bottom {
+              display: -webkit-box;
+              margin-top: .33rem;
+
+              img {
+                width: 1.88rem;
+                height: 1.67rem;
+              }
+
+              div {
+                text-align: center;
+                margin-left: .2rem;
+
+                img {
+                  width: 1.43rem;
+                  height: .84rem;
+                }
+
+                p {
+                  font-size: $fontSize;
+                  color: $color70;
+                  line-height: 1.072;
+                  margin: .06rem 0 .17rem 0;
+                  position: relative;
+                  top: -.4rem;
+                }
+
+                em {
+                  font-size: $fontSize18;
+                  color: $color157;
+                  line-height: 1.028;
+                  text-align: center;
+                  position: relative;
+                  top: -.4rem;
+                }
+
+                &::before {
+                  width: 1.43rem;
+                  height: .84rem;
+                  background-image: url('../images/loveHome.png') no-repeat center center;
+                  background-size: 100%;
+                }
+              }
+
+            }
+          }
+
+          .classicCase-list-bg {
+            width: 7.5rem;
+            height: 3.52rem;
+            background-color: rgb(214, 220, 232);
+            position: absolute;
+            top: 2.3rem;
+            // z-index: -1;
+
+            a {
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+            }
+
+            .classicCase-item {
+              color: $color;
+              width: 3.1rem;
+              height: 3.95rem;
+              background-color: $color;
+              position: absolute;
+              z-index: 100;
+              box-shadow: 0px .2rem .2rem #424959;
+
+              img {
+                width: 3rem;
+                height: 3.3rem;
+                margin-top: .08rem;
+              }
+
+              div {
+                width: 3rem;
+                height: .52rem;
+                line-height: .52rem;
+                background-color: #373133;
+                font-size: .28rem;
+                margin-left: .05rem;
+              }
+
+            }
+
+            .classicCase-item-one {
+              top: -1.53rem;
+              left: .35rem;
+            }
+
+            .classicCase-item-two {
+              top: -1.5rem;
+              right: .39rem;
+            }
+
+            .classicCase-item-three {
+              bottom: -3.5rem;
+              right: .39rem;
+            }
+          }
+        }
+      }
+
+    }
+
+
+    // 新闻资讯
+    .theNews {
+      .theNews-header {
+        margin: .7rem 0 .13rem 0;
+
+        .title {
+          font-size: $fontSize37;
+          color: $color70;
+          text-transform: uppercase;
+          line-height: 1.142;
+          text-align: center;
+        }
+
+        .theNews-bottom {
+          display: -webkit-box;
+          margin-top: .33rem;
+
+          img {
+            width: 1.43rem;
+            height: .94rem;
+            margin: 0 .8rem 0 .58rem;
+          }
+
+          div {
+            text-align: center;
+
+            p {
+              font-size: $fontSize32;
+              color: $color70;
+              line-height: 1.072;
+              margin: .06rem 0 .17rem 0;
+            }
+
+            em {
+              font-size: $fontSize18;
+              color: $color157;
+              line-height: 1.028;
+              text-align: center;
+            }
+          }
+
+        }
+      }
+
+      .theNews-list {
+        li {
+          display: -webkit-box;
+          padding: .42rem 0 .42rem 0;
+          border-bottom: 1px solid #E4E4E4;
+          margin: 0 .3rem;
+
+          a {
+            display: inherit;
+          }
+
+          img {
+            width: 2.8rem;
+            height: 2rem;
+          }
+
+          div {
+            margin-left: .27rem;
+            line-height: .53rem;
+
+            .title {
+              color: #101D30;
+              width: 3.28rem;
+              font-size: .3rem;
+            }
+
+            .desc {
+              width: 3.6rem;
+              color: #9D9D9D;
+              font-size: $fontSize;
+            }
+          }
+
+          &:last-child {
+            border: none;
+            padding-bottom: .7rem;
+          }
+
+        }
+
+      }
+    }
+
+    // 新闻详情
+    .details-container {
+      font-size: $fontSize;
+      padding: 1.13rem .2rem 0 .2rem;
+
+      .title {
+        font-size: .48rem;
+        color: rgb(16, 29, 48);
+        line-height: .8rem;
+      }
+
+      .author-time {
+        color: $color217;
+        margin-bottom: .42rem;
+      }
+
+      .content {
+        text-align: center;
+        line-height: .42rem;
+        color: $color51;
+
+        img {
+          width: 5.42rem;
+          height: 3.64rem;
+        }
+
+        p {
+          text-align: left;
+          // text-indent: .48rem;
+        }
+
+        .second-paragraph {
+          margin: .62rem 0 .7rem 0;
+        }
+
+        .third-paragraph {
+          margin: .68rem 0 .6rem 0;
+        }
+
+        .fourth-paragraph {
+          margin-bottom: .42rem;
+        }
+      }
+
+      .detail-Upper-lower {
+        a {
+          display: block;
+          line-height: .4rem;
+          color: $color217;
+          text-decoration: underline;
+        }
+
+        .next {
+          margin-bottom: .2rem;
+        }
+      }
+    }
+
+  }
+}
